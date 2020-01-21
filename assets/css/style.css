@@ -1,0 +1,68 @@
+body {
+    background: url("../images/gemstone-image.jpg");
+
+}
+
+.container {
+    max-width: 90%;
+}
+  
+  h1 {
+      text-align: center;
+}
+  
+.my-col-1 {
+    background-color: orange;
+    color: white;
+    font-size: 10px;
+    
+}
+
+.my-col-2 {
+    background-color: lightsalmon;
+    height: 250px;
+    
+}
+
+.my-col-3 {
+    background-color: lime;
+    
+}
+
+#gScore {
+    background-color: #009900;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#wScore {
+    background-color: #00ffff;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+#lScore {
+    background-color: #00ffff;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.crystals {
+    margin: 20px;
+    padding: 10px;
+  }
+.btn {
+    height: 150px;
+    width: 150px;
+}
+
+#uScore {
+    background-color: #29a3a3;
+    color: white;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+}

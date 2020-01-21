@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Crystals Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+    <!--Header-->
+        <div class="row header">
+            <div class="col-md-12 my-col-1">
+                <h1>CrystalsCollector!</h1>
+            </div>
+        </div>
+        <br>
+        <!--Main Row-->
+        <div class="row">
+            <div class="col-md-12 my-col-2">
+                <p><small>You will be given a random number at the start of the game.</small></p>
+
+                <p><small>There are four crystals below. By clicking on a crystal you will add a specific amount of
+                        points to
+                        your total score.</small></p>
+
+                <p><small> the game by matching your total score to a random number,you lose the game if your total
+                        score goes above the random number.</small></p>
+
+                <p><small>The value of each crystal is hidden from you until you click on it.</small></p>
+
+                <p><small>Each time when the game starts, the game will change the values of each crystal.</small></p>
+            </div>
+        </div>
+        <br>
+        <!--Target Score-->
+        <div class="row third">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 my-col-3" id="gScore">
+                <h2>Target Score:</h2>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <div class="row" id="wScore">
+                    <div class="col-md-4 my-col-4">
+                        <h2>Wins:</h2>
+                    </div>
+                </div>
+                <div class="row" id="lScore">
+                    <div class="col-md-4 my-col-4">
+                        <h2>Losses:</h2>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <!-- Crystals -->
+        <div class="row fourth">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 crystalPic">
+                        <input type="image" class="btn" id="blue" src="assets/images/blue_diamond.png"></input>
+                    </div>
+                    <div class="col-md-3 crystalPic">
+                        <input type="image" class="btn" id="red" src="assets/images/red_ruby.png"></input>
+                    </div>
+                    <div class="col-md-3 crystalPic">
+                        <input type="image" class="btn" id="yellow" src="assets/images/yellow_jewel.png"></input>
+                    </div>
+                    <div class="col-md-3 crystalPic">
+                        <input type="image" class="btn" id="green" src="assets/images/green_jewel.png"></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Counters Row-->
+        <div class="row fith">
+            <div class="col-md-4"></div>
+            <div class="col-md-3" id="uScore">Your total score is:</div>
+            <div class="col=col-md-4"></div>
+        </div>
+    </div>
+       <!-- Optional JavaScript -->
+       
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="assets/javascript/game.js"></script>   
+</body>
+
+</html>
