@@ -24,15 +24,12 @@ body {
     
 }
 
-.my-col-3 {
-    background-color: lime;
-    
-}
 
-#gScore {
-    background-color: #009900;
+#targetScore {
+    background-color: limegreen;
     color: white;
     text-align: center;
+    font-size: 40px;
     padding: 15px;
 }
 
@@ -59,10 +56,11 @@ body {
     width: 150px;
 }
 
-#uScore {
+#yourScore {
     background-color: #29a3a3;
     color: white;
     margin: 20px;
     padding: 15px;
+    font-size: 30px;
     text-align: center;
 }

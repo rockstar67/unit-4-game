@@ -17,6 +17,11 @@ var crystal = {
     {
         name: "Red",
         value: 0
+    },
+    yellow:
+    {
+        name: "Yellow",
+        value: 0
     }
 
 };
@@ -31,55 +36,92 @@ var lossCount    = 0;
 
 // FUNCTIONS
 //-----------------------------------------------------------------------------
+
+// Helper Functions for getting random numbers.
 var getRandom = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Starts the Game (and restarts the game)
+var startGame = function(){
 
-var startGame = function() {
 
-    // Reset the Current Score
-    var currentScore = 0;
 
-    // Set a new Target Score (between 19 and 120)
+// Reset the Current Score
+var currentScore = 0;
 
-    targetScore = getRandom(19, 120);
+// Set a new Target Score (between 19 and 120)
 
-    // Set different values for each of the crystals (between 1 and 12)
+targetScore = getRandom(19, 120);
+
+// Set different values for each of the crystals (between 1 and 12)
     crystal.blue.value      = getRandom(1, 12);
     crystal.red.value       = getRandom(1, 12);
-    crystal.green.value     = getRandom(1, 12);
     crystal.yellow.value    = getRandom(1, 12);
+    crystal.green.value     = getRandom(1, 12);
 
-    // Change the HTML to reflect all of these changes
-
-    //Testing Console
-    console.log("---------------------------")
-    console.log("Target Score: " + targetScore);
-    console.log("Blue: " + crystal.blue.value + " | Red: " + crystal.red.value + " | Green: " + crystal.green.value + " | Yellow: " + crystal.yellow.value);
-    console.log("----------------------------")
+    
+// Change the HTML to reflect all of these changes
+    $("#yourScore").html(currentScore);
+    $("#targetScore").html(targetScore);
+    
+//Testing Console
+console.log("---------------------------")
+console.log("Target Score: " + targetScore);
+console.log("Blue: " + crystal.blue.value + " | Red: " + crystal.red.value + " | Yellow: " + crystal.yellow.value + " | Green: " + crystal.green.value);
+console.log("----------------------------")
 }
 
+// Respond to clicks on the crystals
+    var addValues = function(crystal) {
 
+        // Change currentScore
+        currentScore = currentScore + crystal.value;
 
+        // Change the HTML to reflect changes in currentScore
+        $("#yourScore").html(currentScore);
 
+        // Call the checkWin function
+        checkWin();
 
+    
+        //Testing Console
+        console.log("Your Score: " + currentScore);
+    
+    }
+// Check if User Won or Loss and Reset the game
+var checkWin = function() {
 
+    //Check if currentScore is larger than targetScore
+    if(currentScore > targetScore) {
+        alert("Sorry, You Lost!");
+        console.log("You Lost");
+    }
 
+    else if (currentScore == targetScore) {
+        alert("Congratulations! You Won!");
+        console.log("You Won!");
+    }
+
+}
 // MAIN PROCESS
 //-----------------------------------------------------------------------------
+
+// Starts the Game the First Time.
+startGame();
+
 $("#blue").click(function() {
-    alert("test");
+    addValues(crystal.blue);
 });
 
 $("#red").click(function() {
-    alert("test");
-});
-
-$("#green").click(function() {
-    alert("test");
+    addValues(crystal.red);
 });
 
 $("#yellow").click(function() {
-    alert("test");
+    addValues(crystal.yellow);
+});
+
+$("#green").click(function() {
+    addValues(crystal.green);
 });
