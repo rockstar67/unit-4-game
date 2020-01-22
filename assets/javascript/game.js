@@ -43,7 +43,7 @@ var getRandom = function(min, max) {
 }
 
 // Starts the Game (and restarts the game)
-var startGame = function(){
+ startGame = function(){
 
 
 
@@ -96,11 +96,30 @@ var checkWin = function() {
     if(currentScore > targetScore) {
         alert("Sorry, You Lost!");
         console.log("You Lost");
+
+        // Add to loss Counter
+        lossCount++;
+
+        // Change Loss Count HTML
+        $("#lossCount").text("Losses: " + lossCount);
+
+        // Restart the game
+        startGame();
     }
 
     else if (currentScore == targetScore) {
         alert("Congratulations! You Won!");
         console.log("You Won!");
+
+
+        // Add to the Win Counter
+        winCount++;
+
+        // Change Win Count HTML
+        $("#winCount").text("Wins: " + winCount);
+    
+        // Restart the game
+        startGame();
     }
 
 }
