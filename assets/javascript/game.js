@@ -43,12 +43,12 @@ var getRandom = function(min, max) {
 }
 
 // Starts the Game (and restarts the game)
- startGame = function(){
+var startGame = function(){
 
 
 
 // Reset the Current Score
-var currentScore = 0;
+ currentScore = 0;
 
 // Set a new Target Score (between 19 and 120)
 
@@ -82,7 +82,8 @@ console.log("----------------------------")
         $("#yourScore").html(currentScore);
 
         // Call the checkWin function
-        checkWin();
+      checkWin();
+
 
     
         //Testing Console
@@ -95,7 +96,7 @@ var checkWin = function() {
     //Check if currentScore is larger than targetScore
     if(currentScore > targetScore) {
         alert("Sorry, You Lost!");
-        console.log("You Lost");
+        console.log("You Lost!");
 
         // Add to loss Counter
         lossCount++;
