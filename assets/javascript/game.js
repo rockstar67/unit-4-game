@@ -84,7 +84,6 @@ console.log("----------------------------")
         // Call the checkWin function
       checkWin();
 
-
     
         //Testing Console
         console.log("Your Score: " + currentScore);
@@ -101,8 +100,8 @@ var checkWin = function() {
         // Add to loss Counter
         lossCount++;
 
-        // Change Loss Count HTML
-        $("#lossCount").text("Losses: " + lossCount);
+        // Change Loss Count 
+        $("#lossCount").text("losses: " + lossCount);
 
         // Restart the game
         startGame();
@@ -116,7 +115,7 @@ var checkWin = function() {
         // Add to the Win Counter
         winCount++;
 
-        // Change Win Count HTML
+        // Change Win Count 
         $("#winCount").text("Wins: " + winCount);
     
         // Restart the game

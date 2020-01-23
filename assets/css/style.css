@@ -46,11 +46,10 @@ body {
     width: 120px;
 }
 
-
 #yourScore {
     background-color: #29a3a3;
     color: white;
-    font-size: 30px;
     text-align: center;
     height: 50px;
+    font-size: 30px;
 }
